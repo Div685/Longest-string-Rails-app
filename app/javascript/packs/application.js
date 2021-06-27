@@ -8,7 +8,6 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap';
-require("bootstrap/dist/js/bootstrap")
 
 Rails.start()
 Turbolinks.start()
@@ -16,4 +15,12 @@ ActiveStorage.start()
 
 setTimeout(function(){
   $("#successMessage").remove();
-}, 5000)
+}, 5000);
+
+setTimeout(function(){
+  $("#notice").remove();
+}, 5000);
+
+setTimeout(function(){
+  $("#alert").remove();
+}, 5000);

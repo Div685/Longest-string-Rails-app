@@ -15,8 +15,10 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to root_path, notice: 'Logged Out'
+    respond_to do |format|
+      session[:user_id] = nil
+      format.html { redirect_to root_path, notice: 'Logged Out' }
+    end
   end
 
 end
