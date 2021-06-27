@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'users#new'
   resources :users, only: [:new, :create]
-  get '/users/:uname', to: "users#show", as: 'sign_user'
+  get '/users/:uname', to: "users#show"
   get 'sign_up' => 'users#new', as: 'sign_up'
   get 'login', to: "sessions#new"
   post 'login', to: "sessions#create"
