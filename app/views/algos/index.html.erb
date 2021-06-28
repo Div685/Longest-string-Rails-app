@@ -1,4 +1,50 @@
-<h1>
-welcome User
-</h1>
-<p> Go Back to main search page <%= link_to 'Back', new_algo_path, class: "" %> </p>
+<div class="p-3">
+
+  <h3>
+    Longest Substring Without Repeating Characters
+  </h3>
+
+  <p class="my-3"> Given a string s, find the length of the longest substring without repeating characters. </p>
+
+  <p class="text-bold">Example 1</p>
+  <div class="bg-light w-50 p-2">
+    <code>
+      <b> Input: </b> s = "abcabcbb" <br>
+    </code>
+    <code>
+      <b> Output: </b> 3 <br>
+    </code>
+    <code>
+      <b>Explanation: </b> The answer is "abc", with the length of 3.
+    </code>
+  </div>
+
+  <p class="font-weight-bold my-2">Example 2</p>
+  <div class="bg-light w-50 p-2">
+    <code>
+      <b> Input: </b> s = "bbbbb" <br>
+    </code>
+    <code>
+      <b> Output: </b> 1 <br>
+    </code>
+    <code>
+      <b>Explanation: </b> The answer is "b", with the length of 1.
+    </code>
+  </div>
+
+  <p class="text-bold my-2">Example 3</p>
+  <div class="bg-light w-50 p-2">
+    <code>
+      <b> Input: </b> s = "pwwkew" <br>
+    </code>
+    <code>
+      <b> Output: </b> 3 <br>
+    </code>
+    <code>
+      <b>Explanation: </b> The answer is "wke", with the length of 3.
+    </code>
+    Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+  </div>
+
+  <%= link_to 'Click here to Try', new_algo_path, class: 'h4 my-2'%>
+</div>
