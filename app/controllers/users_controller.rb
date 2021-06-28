@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :authorized, only: [:new, :create]
 
+  def index
+  end
+  
   def new
     @user = User.new
   end
@@ -11,7 +14,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to "/users/#{@user.uname}", notice: 'User was Successfully created'  }
+        format.html { redirect_to new_algo_path, notice: 'User was Successfully created'  }
       else
         format.html { render :new }
       end

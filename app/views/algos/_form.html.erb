@@ -1,0 +1,20 @@
+<%= form_with model: @algo, local: true do |f| %>
+  <% if @algo.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        <%= pluralize(@algo.errors.count, "error") %> prohibited this User from being saved:
+      </div>
+      <ul class="list-group list-group-flush mb-2">
+        <% @algo.errors.full_messages.each do |message| %>
+          <li class="list-group-item py-1 text-danger"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="mb-3">
+    <%= label_tag(:name, 'Name') %>: <%= f.text_field :name, placeholder: 'pwwkew', class: 'form-control' %>
+  </div>
+
+  <%= f.submit 'Submit', :class => 'btn btn-primary rounded-1' %>
+
+<% end %>
