@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'users#new'
-  resources :users, only: [:new, :create]
+  resources :users, only: [:index, :new, :create]
+  resources :algos, only: [:index, :new, :create]
+  get '/:name', to: "algos#show"
   get '/users/:uname', to: "users#show"
   get 'sign_up' => 'users#new', as: 'sign_up'
   get 'login', to: "sessions#new"
