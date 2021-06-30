@@ -9,20 +9,15 @@ class AlgosController < ApplicationController
   def create
     @algo = Algo.new(algo_params)
     if @algo.save
-      redirect_to "/#{URI.escape(@algo.name) }"
+      redirect_to "/#{ERB::Util.url_encode(@algo.name)}"
     else
       render :new
     end
   end
-
-  # def show
-  #   @algo = Algo.find_by(name: params[:name])
-  # end
 
   private
 
   def algo_params
     params.require(:algo).permit(:id, :name)
   end
-
 end

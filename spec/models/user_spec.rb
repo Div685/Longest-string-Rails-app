@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   describe 'Validateions' do
     context 'When user name is nil' do
       it { should validate_presence_of(:uname) }

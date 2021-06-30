@@ -2,10 +2,9 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :feature do
   let(:user_params) do
-    { name: 'Divyesh', 
-      uname: 'Divyesh', 
-      password: '123123123' 
-    }
+    { name: 'Divyesh',
+      uname: 'Divyesh',
+      password: '123123123' }
   end
   let(:user) { User.new(user_params) }
 
