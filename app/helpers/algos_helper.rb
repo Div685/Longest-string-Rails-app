@@ -1,6 +1,6 @@
 module AlgosHelper
   def longest_string(string)
-    return 0 if string == ""
+    return 0 if string == "" || string == nil
     map = Hash.new(0)
     n = string.length
     maxlen = 0
