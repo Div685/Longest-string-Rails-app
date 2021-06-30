@@ -2,12 +2,14 @@
 
 # Longest String App built with Ruby on Rails
 
+![screenshot](screencapture.png)
+
 ## About the Project
 
 The main goal for this project was to create Rails app that contails following functionallity:
 - should have a form with atleast one field e.g name
 - submission of the form should redirect user to the show page where it shows longest string without repeating charcters i.e if name is pwwkew it should print on screen 'wke' and length of that string 3. 
-- the url of the show page should have `/users/name`.
+- the url of the show page should have `/name`.
 
 **Nice to have features**
 - login functionallity
@@ -21,7 +23,7 @@ The main goal for this project was to create Rails app that contails following f
 
 ## Live Demo
 
-[Live Demo Link](https://salon-appointment-api.herokuapp.com/api/v1/items)
+[Live Demo Link](https://frozen-caverns-25964.herokuapp.com/login)
 
 
 ## Getting Started
